@@ -25,7 +25,7 @@ function publicar() {
             yield canal.assertExchange(nombreExchange, 'headers', { durable: true });
             const mensaje = 'Hola, soy el mensaje del productor';
             const headers = {
-                prioridad: 'Media',
+                prioridad: 'Alto',
                 tipo: 'importante',
             };
             canal.publish(nombreExchange, '', buffer_1.Buffer.from(mensaje), { headers });
